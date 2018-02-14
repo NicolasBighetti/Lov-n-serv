@@ -10,9 +10,17 @@ var users = require('./routes/users');
 
 var app = express();
 
+var mongoose = require('mongoose')
+
+var DBPATH = "mongodb://lovnconnect:loveLOVE@ds133558.mlab.com:33558/lovngo"
+
+mongoose.connect(DBPATH)
+.then((err, succ)=> { console.log(`Succesfully Connected to the Mongodb Database  at URL :` + DBPATH)})
+.catch((err, succ)=> { console.log(`Error Connecting to the Mongodb Database at URL :`+ DBPATH + ' err : ' + err)})
+
 // view engine setup
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'jade');
+/*app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'jade');*/
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
