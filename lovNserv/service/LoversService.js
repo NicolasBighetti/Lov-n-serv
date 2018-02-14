@@ -8,9 +8,10 @@ exports.getLocalLovers = async function(query, page, limit){
   };
 
   try{
-    var lovers = await LoversModel.paginate(query, options);
+    var lovers = await LoversModel.find(query);
     return lovers;
   } catch(e){
-    console.log('couldnt locate local lovers');
+    console.log(JSON.stringify(LoversModel));
+    console.log('couldnt locate local lovers.\n Error : ' + e);
   }
 }
