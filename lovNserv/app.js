@@ -8,9 +8,14 @@ var bodyParser = require('body-parser');
 var index = require('./routes/index');
 var users = require('./routes/users');
 
+
+var bluebird = require('bluebird')
+
+
 var app = express();
 
 var mongoose = require('mongoose')
+mongoose.Promise = bluebird
 
 var DBPATH = "mongodb://lovnconnect:loveLOVE@ds133558.mlab.com:33558/lovngo"
 
