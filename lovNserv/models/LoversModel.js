@@ -3,6 +3,7 @@ var mongoosePaginate = require('mongoose-paginate')
 
 
 var LoversSchema = new mongoose.Schema({
+  //Geojson uses long/lat not lat/long
   location : {type: String, coordinates: [Number]},
   pictureBlob : {type: String}
 });

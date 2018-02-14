@@ -7,6 +7,7 @@ var bodyParser = require('body-parser');
 
 var index = require('./routes/index');
 var users = require('./routes/users');
+var api = require('./route/LovNRoute');
 
 
 var bluebird = require('bluebird')
@@ -24,8 +25,9 @@ mongoose.connect(DBPATH)
 .catch((err, succ)=> { console.log(`Error Connecting to the Mongodb Database at URL :`+ DBPATH + ' err : ' + err)})
 
 // view engine setup
-/*app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'jade');*/
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'jade');
+
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
@@ -37,6 +39,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
 app.use('/users', users);
+app.use('/api', api);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
