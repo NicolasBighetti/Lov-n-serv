@@ -37,3 +37,24 @@ exports.getLocalLovers = async function(req, res, next){
         return res.status(400).json({status: 400, message: e.message});
     }
 }
+
+//POST params
+// lat , long, picture (base64  data)
+
+exports.addLovers = async function(req, res, next){
+  var lovers = {
+    location : {
+      type : 'Point',
+      coordinates: [req.body.long, req.body.lat]
+    },
+    pictureBlob : req.body.picture
+  }
+
+  try{
+    var createdLover = await LoversService.addNewLovers(lovers);
+
+    return res.status(201).json({status: 201, data: createdLover, message: "Succesfully Created Lovers"})
+  }catch(e){
+  return res.status(400).json({status: 400, message: e.message + ", Lovers Creation was Unsuccesfull"})
+  }
+}

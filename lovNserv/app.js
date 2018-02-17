@@ -24,6 +24,13 @@ mongoose.connect(DBPATH)
 .then((err, succ)=> { console.log(`Succesfully Connected to the Mongodb Database  at URL :` + DBPATH)})
 .catch((err, succ)=> { console.log(`Error Connecting to the Mongodb Database at URL :`+ DBPATH + ' err : ' + err)})
 
+app.use(function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
+  next();
+});
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
