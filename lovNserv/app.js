@@ -5,8 +5,6 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
-var index = require('./routes/index');
-var users = require('./routes/users');
 var api = require('./route/LovNRoute');
 
 
@@ -18,11 +16,14 @@ var app = express();
 var mongoose = require('mongoose')
 mongoose.Promise = bluebird
 
-var DBPATH = "mongodb://lovnconnect:loveLOVE@ds133558.mlab.com:33558/lovngo"
 
-mongoose.connect(DBPATH)
-.then((err, succ)=> { console.log(`Succesfully Connected to the Mongodb Database  at URL :` + DBPATH)})
-.catch((err, succ)=> { console.log(`Error Connecting to the Mongodb Database at URL :`+ DBPATH + ' err : ' + err)})
+app.mongoConnect = function(){
+  var DB_PATH = "mongodb://lovnconnect:loveLOVE@ds133558.mlab.com:33558/lovngo";
+
+  mongoose.connect(DB_PATH)
+  .then(()=> { console.log(`Succesfully Connected to the Mongodb Database  at URL :` + DB_PATH)})
+  .catch(()=> { console.log(`Error Connecting to the Mongodb Database at URL :`+ DB_PATH)})
+};
 
 app.use(function(req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
@@ -44,10 +45,13 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', index);
-app.use('/users', users);
 app.use('/api', api);
 
+//serv test coverage report
+app.use(express.static(__dirname + '/coverage/lcov-report/'));
+app.get('/coverage', function(req,res){
+    res.sendFile(__dirname + '/coverage/lcov-report/index.html');
+});
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

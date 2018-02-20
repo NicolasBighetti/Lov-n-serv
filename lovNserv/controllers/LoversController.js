@@ -5,8 +5,13 @@ exports.getLocalLovers = async function(req, res, next){
     var page = req.query.page ? req.query.page : 1
     var limit = req.query.limit ? req.query.limit : 1000;
 
-    console.log("REQ : " + JSON.stringify(req.query));
+    if(!req.query.long || !req.query.lat){
+        return res.status(400).json({status: 400, message: "lat and long needed for geospatial query near"});
+    }
 
+    if(isNaN(req.query.distance)){
+        return res.status(400).json({status: 400, message: "distance (in meters) must be a number "});
+    }
     // setup geoJson for query
      var geoJson             = {};
      geoJson.type            = "Point";
