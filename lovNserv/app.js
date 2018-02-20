@@ -13,7 +13,13 @@ var bluebird = require('bluebird')
 
 var app = express();
 
-var mongoose = require('mongoose')
+var swagger = require('swagger-spec-express');
+var packageJson = require('./package.json');
+
+var mongoose = require('mongoose');
+
+var swagger = require('swagger-spec-express');
+const swaggerUi = require('swagger-ui-express');
 mongoose.Promise = bluebird
 
 
@@ -24,6 +30,56 @@ app.mongoConnect = function(){
   .then(()=> { console.log(`Succesfully Connected to the Mongodb Database  at URL :` + DB_PATH)})
   .catch(()=> { console.log(`Error Connecting to the Mongodb Database at URL :`+ DB_PATH)})
 };
+
+var options = {
+   title: packageJson.title,
+   description: packageJson.description,
+   termsOfService: 'API à destination des rencontres amoureuses géolocalisées',
+   contact: {
+       name: '',
+       url: '',
+       email: ''
+   },
+   license: {
+       name: '',
+       url: ''
+   },
+   version: packageJson.version,
+   host: 'localhost',
+   basePath: '/',
+   schemes: ['http'],
+   consumes: ['application/json'],
+   produces: ['application/json'],
+   paths: {
+       //manual paths here if desired, not required.
+   },
+   definitions: {
+       //manual definitions here if desired, not required.
+   },
+   parameters: {
+       //manual definitions here if desired, not required.
+   },
+   responses: {
+       //manual responses here if desired, not required.
+   },
+   tags: [
+       {
+           name: 'Lovers',
+           description: 'Récupération et creation de Lovers',
+           externalDocs: {
+               description: 'MongoDB GeoQuery doc',
+               url: 'https://docs.mongodb.com/manual/reference/operator/query-geospatial/'
+           }
+       }
+   ],
+   externalDocs: {
+       description: 'This doc describes how to use swagger spec express',
+       url: 'https://github.com/eXigentCoder/swagger-spec-express'
+   }
+};
+
+swagger.initialise(app, options);
+
 
 app.use(function(req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
@@ -47,11 +103,20 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/api', api);
 
+swagger.compile();
+
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swagger.json()));
+
 //serv test coverage report
 app.use(express.static(__dirname + '/coverage/lcov-report/'));
 app.get('/coverage', function(req,res){
     res.sendFile(__dirname + '/coverage/lcov-report/index.html');
 });
+
+app.get('/swagger.json', (err, res) => {
+    res.status(200).json(swagger.json());
+});
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
