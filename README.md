@@ -26,6 +26,11 @@ Once you have run the tests at least once, you can access an HTML report in the 
 
 The API documentation is accessible here => `http://localhost:3000/api-docs`or `https://lovngo.herokuapp.com/api-docs/`
 
+You can try the API live from the documentation page!
+
+![alt text](https://github.com/NicolasBighetti/Lov-n-serv/blob/master/resources/lovers-try.png)
+
+
 ## Docker
 
 To create the docker image, just run the `dockerSetup.sh` file. Then, run the `dockerRun.sh` file. The Docker container is now running locally on port 8080 (provided that you installed docker first)
