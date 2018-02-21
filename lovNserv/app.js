@@ -45,9 +45,9 @@ var options = {
        url: ''
    },
    version: packageJson.version,
-   host: 'localhost:3000',
+   host: 'https://lovngo.herokuapp.com/',
    basePath: '/',
-   schemes: ['http'],
+   schemes: ['http', 'https'],
    consumes: ['application/json'],
    produces: ['application/json'],
    paths: {
@@ -92,6 +92,11 @@ app.use(function(req, res, next) {
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 
+//serv test coverage report
+//app.use(express.static(__dirname + '/coverage/lcov-report/'));
+app.use('/coverage', function(req,res){
+    res.sendFile(__dirname + '/coverage/lcov-report/');
+});
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
@@ -99,23 +104,19 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/api', api);
 
 swagger.compile();
 
-app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swagger.json()));
 
-//serv test coverage report
-app.use(express.static(__dirname + '/coverage/lcov-report/'));
-app.get('/coverage', function(req,res){
-    res.sendFile(__dirname + '/coverage/lcov-report/index.html');
-});
 
 app.get('/swagger.json', (err, res) => {
     res.status(200).json(swagger.json());
 });
+
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swagger.json()));
+app.use('/', swaggerUi.serve, swaggerUi.setup(swagger.json()));
 
 
 // catch 404 and forward to error handler
