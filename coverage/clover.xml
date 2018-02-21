@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1519202353239" clover="3.2.0">
-  <project timestamp="1519202353239" name="All files">
+<coverage generated="1519203340577" clover="3.2.0">
+  <project timestamp="1519203340577" name="All files">
     <metrics statements="114" coveredstatements="82" conditionals="14" coveredconditionals="7" methods="13" coveredmethods="2" elements="141" coveredelements="91" complexity="0" loc="114" ncloc="114" packages="6" files="6" classes="6">
       <package name="Lov-n-serv">
         <metrics statements="52" coveredstatements="39" conditionals="4" coveredconditionals="0" methods="8" coveredmethods="1"/>
