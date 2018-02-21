@@ -47,7 +47,7 @@ var options = {
    version: packageJson.version,
    host: 'lovngo.herokuapp.com',
    basePath: '/',
-   schemes: ['http', 'https'],
+   schemes: ['https'],
    consumes: ['application/json'],
    produces: ['application/json'],
    paths: {
