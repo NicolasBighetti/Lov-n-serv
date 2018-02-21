@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1519160830973" clover="3.2.0">
-  <project timestamp="1519160830973" name="All files">
-    <metrics statements="99" coveredstatements="69" conditionals="14" coveredconditionals="7" methods="11" coveredmethods="2" elements="124" coveredelements="78" complexity="0" loc="99" ncloc="99" packages="6" files="6" classes="6">
-      <package name="lovNserv">
-        <metrics statements="39" coveredstatements="28" conditionals="4" coveredconditionals="0" methods="6" coveredmethods="1"/>
-        <file name="app.js" path="/home/user/SI5/LOVE/Lov-n-serv/lovNserv/app.js">
-          <metrics statements="39" coveredstatements="28" conditionals="4" coveredconditionals="0" methods="6" coveredmethods="1"/>
+<coverage generated="1519201121945" clover="3.2.0">
+  <project timestamp="1519201121945" name="All files">
+    <metrics statements="114" coveredstatements="82" conditionals="14" coveredconditionals="7" methods="13" coveredmethods="2" elements="141" coveredelements="91" complexity="0" loc="114" ncloc="114" packages="6" files="6" classes="6">
+      <package name="Lov-n-serv">
+        <metrics statements="52" coveredstatements="39" conditionals="4" coveredconditionals="0" methods="8" coveredmethods="1"/>
+        <file name="app.js" path="/home/user/SI5/LOVE/Lov-n-serv/app.js">
+          <metrics statements="52" coveredstatements="39" conditionals="4" coveredconditionals="0" methods="8" coveredmethods="1"/>
           <line num="1" count="2" type="stmt"/>
           <line num="2" count="2" type="stmt"/>
           <line num="3" count="2" type="stmt"/>
@@ -17,39 +17,52 @@
           <line num="14" count="2" type="stmt"/>
           <line num="16" count="2" type="stmt"/>
           <line num="17" count="2" type="stmt"/>
-          <line num="20" count="2" type="stmt"/>
-          <line num="21" count="0" type="stmt"/>
-          <line num="23" count="0" type="stmt"/>
-          <line num="24" count="0" type="stmt"/>
-          <line num="25" count="0" type="stmt"/>
-          <line num="28" count="2" type="stmt"/>
-          <line num="29" count="2" type="stmt"/>
-          <line num="30" count="2" type="stmt"/>
-          <line num="31" count="2" type="stmt"/>
-          <line num="32" count="2" type="stmt"/>
-          <line num="36" count="2" type="stmt"/>
-          <line num="37" count="2" type="stmt"/>
-          <line num="42" count="2" type="stmt"/>
-          <line num="43" count="2" type="stmt"/>
-          <line num="44" count="2" type="stmt"/>
-          <line num="45" count="2" type="stmt"/>
-          <line num="46" count="2" type="stmt"/>
-          <line num="48" count="2" type="stmt"/>
-          <line num="52" count="2" type="stmt"/>
-          <line num="53" count="0" type="stmt"/>
-          <line num="54" count="0" type="stmt"/>
-          <line num="55" count="0" type="stmt"/>
-          <line num="59" count="2" type="stmt"/>
-          <line num="61" count="0" type="stmt"/>
-          <line num="62" count="0" type="cond" truecount="0" falsecount="2"/>
-          <line num="65" count="0" type="cond" truecount="0" falsecount="2"/>
-          <line num="66" count="0" type="stmt"/>
-          <line num="69" count="2" type="stmt"/>
+          <line num="19" count="2" type="stmt"/>
+          <line num="21" count="2" type="stmt"/>
+          <line num="22" count="2" type="stmt"/>
+          <line num="23" count="2" type="stmt"/>
+          <line num="26" count="2" type="stmt"/>
+          <line num="27" count="0" type="stmt"/>
+          <line num="29" count="0" type="stmt"/>
+          <line num="30" count="0" type="stmt"/>
+          <line num="31" count="0" type="stmt"/>
+          <line num="34" count="2" type="stmt"/>
+          <line num="81" count="2" type="stmt"/>
+          <line num="84" count="2" type="stmt"/>
+          <line num="85" count="2" type="stmt"/>
+          <line num="86" count="2" type="stmt"/>
+          <line num="87" count="2" type="stmt"/>
+          <line num="88" count="2" type="stmt"/>
+          <line num="92" count="2" type="stmt"/>
+          <line num="93" count="2" type="stmt"/>
+          <line num="98" count="2" type="stmt"/>
+          <line num="99" count="2" type="stmt"/>
+          <line num="100" count="2" type="stmt"/>
+          <line num="101" count="2" type="stmt"/>
+          <line num="102" count="2" type="stmt"/>
+          <line num="104" count="2" type="stmt"/>
+          <line num="106" count="2" type="stmt"/>
+          <line num="108" count="2" type="stmt"/>
+          <line num="111" count="2" type="stmt"/>
+          <line num="112" count="2" type="stmt"/>
+          <line num="113" count="0" type="stmt"/>
+          <line num="116" count="2" type="stmt"/>
+          <line num="117" count="0" type="stmt"/>
+          <line num="122" count="2" type="stmt"/>
+          <line num="123" count="0" type="stmt"/>
+          <line num="124" count="0" type="stmt"/>
+          <line num="125" count="0" type="stmt"/>
+          <line num="129" count="2" type="stmt"/>
+          <line num="131" count="0" type="stmt"/>
+          <line num="132" count="0" type="cond" truecount="0" falsecount="2"/>
+          <line num="135" count="0" type="cond" truecount="0" falsecount="2"/>
+          <line num="136" count="0" type="stmt"/>
+          <line num="139" count="2" type="stmt"/>
         </file>
       </package>
-      <package name="lovNserv.controllers">
+      <package name="Lov-n-serv.controllers">
         <metrics statements="26" coveredstatements="19" conditionals="10" coveredconditionals="7" methods="2" coveredmethods="1"/>
-        <file name="LoversController.js" path="/home/user/SI5/LOVE/Lov-n-serv/lovNserv/controllers/LoversController.js">
+        <file name="LoversController.js" path="/home/user/SI5/LOVE/Lov-n-serv/controllers/LoversController.js">
           <metrics statements="26" coveredstatements="19" conditionals="10" coveredconditionals="7" methods="2" coveredmethods="1"/>
           <line num="1" count="2" type="stmt"/>
           <line num="3" count="2" type="stmt"/>
@@ -79,9 +92,9 @@
           <line num="63" count="0" type="stmt"/>
         </file>
       </package>
-      <package name="lovNserv.models">
+      <package name="Lov-n-serv.models">
         <metrics statements="9" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-        <file name="LoversModel.js" path="/home/user/SI5/LOVE/Lov-n-serv/lovNserv/models/LoversModel.js">
+        <file name="LoversModel.js" path="/home/user/SI5/LOVE/Lov-n-serv/models/LoversModel.js">
           <metrics statements="9" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
           <line num="1" count="2" type="stmt"/>
           <line num="2" count="2" type="stmt"/>
@@ -94,9 +107,9 @@
           <line num="24" count="2" type="stmt"/>
         </file>
       </package>
-      <package name="lovNserv.route">
+      <package name="Lov-n-serv.route">
         <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <file name="LovNRoute.js" path="/home/user/SI5/LOVE/Lov-n-serv/lovNserv/route/LovNRoute.js">
+        <file name="LovNRoute.js" path="/home/user/SI5/LOVE/Lov-n-serv/route/LovNRoute.js">
           <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
           <line num="1" count="2" type="stmt"/>
           <line num="3" count="2" type="stmt"/>
@@ -105,21 +118,23 @@
           <line num="9" count="2" type="stmt"/>
         </file>
       </package>
-      <package name="lovNserv.route.api">
-        <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <file name="LoversRoad.js" path="/home/user/SI5/LOVE/Lov-n-serv/lovNserv/route/api/LoversRoad.js">
-          <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <package name="Lov-n-serv.route.api">
+        <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <file name="LoversRoad.js" path="/home/user/SI5/LOVE/Lov-n-serv/route/api/LoversRoad.js">
+          <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
           <line num="1" count="2" type="stmt"/>
-          <line num="3" count="2" type="stmt"/>
+          <line num="2" count="2" type="stmt"/>
+          <line num="4" count="2" type="stmt"/>
           <line num="5" count="2" type="stmt"/>
           <line num="7" count="2" type="stmt"/>
-          <line num="8" count="2" type="stmt"/>
-          <line num="10" count="2" type="stmt"/>
+          <line num="9" count="2" type="stmt"/>
+          <line num="52" count="2" type="stmt"/>
+          <line num="54" count="2" type="stmt"/>
         </file>
       </package>
-      <package name="lovNserv.service">
+      <package name="Lov-n-serv.service">
         <metrics statements="14" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
-        <file name="LoversService.js" path="/home/user/SI5/LOVE/Lov-n-serv/lovNserv/service/LoversService.js">
+        <file name="LoversService.js" path="/home/user/SI5/LOVE/Lov-n-serv/service/LoversService.js">
           <metrics statements="14" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
           <line num="1" count="2" type="stmt"/>
           <line num="4" count="2" type="stmt"/>
