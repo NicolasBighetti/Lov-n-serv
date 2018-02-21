@@ -18,11 +18,11 @@ You can run the application tests by typing `npm test`
 
 Once you have run the tests at least once, you can access an HTML report in the folder `coverage/index.html`. You can also access the coverage while the API is running at `http://localhost:3000/coverage/` or directly at "https://lovngo.herokuapp.com/"
 
-![alt text](https://github.com/NicolasBighetti/Lov-n-serv/blob/master/resources/screen/lovers_test.png)
+![alt text](https://github.com/NicolasBighetti/Lov-n-serv/blob/master/resources/lovers_test.png)
 
 ## API doc
 
-![alt text](https://github.com/NicolasBighetti/Lov-n-serv/blob/master/resources/screen/lovers_dock.png)
+![alt text](https://github.com/NicolasBighetti/Lov-n-serv/blob/master/resources/lovers_dock.png)
 
 The API documentation is accessible here => `http://localhost:3000/api-docs`or "https://lovngo.herokuapp.com/api-docs/"
 
@@ -30,7 +30,7 @@ The API documentation is accessible here => `http://localhost:3000/api-docs`or "
 
 To create the docker image, just run the "dockerSetup.sh" file. Then, run the "dockerRun.sh" file. The Docker container is now running locally on port 8080 (provided that you installed docker first)
 
-![alt text](https://github.com/NicolasBighetti/Lov-n-serv/blob/master/resources/screen/docker_run.png)
+![alt text](https://github.com/NicolasBighetti/Lov-n-serv/blob/master/resources/docker_run.png)
 
 
 ### Database Setup
